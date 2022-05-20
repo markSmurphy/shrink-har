@@ -7,8 +7,8 @@ debug('[%s] started: %O', __filename, process.argv);
 
 // Command line options parser
 const argv = require('yargs')
-.help(false)
-.argv;
+    .help(false)
+    .argv;
 
 // check if "debug" mode is enabled via the command line
 if (argv.debug) {
@@ -63,24 +63,24 @@ try {
         if (settings.commitChanges) {
             // Obtain confirmation for writing changes
             if (settings.confirmChanges === false) { // There was no `--yes` switch, so interactive confirmation is required
-                  let readlineSync = require('readline-sync'); // Import library to read input lines from terminal
+                let readlineSync = require('readline-sync'); // Import library to read input lines from terminal
 
-                  // Confirm, or warn, about backing up files
-                  if (settings.backup) {
-                     console.log(chalk.blueBright('Info: ') + 'If you confirm these changes your files ' + chalk.bold('will') + ' be backed up');
-                  } else {
-                     console.log(chalk.yellow('Warning: ') + 'If you confirm these changes your files ' + chalk.bold('will not') + ' be backed up!');
-                     console.log('You can change this by including the ' + chalk.blueBright('--backup') + ' switch.');
-                  }
+                // Confirm, or warn, about backing up files
+                if (settings.backup) {
+                    console.log(chalk.blueBright('Info: ') + 'If you confirm these changes your files ' + chalk.bold('will') + ' be backed up');
+                } else {
+                    console.log(chalk.yellow('Warning: ') + 'If you confirm these changes your files ' + chalk.bold('will not') + ' be backed up!');
+                    console.log('You can change this by including the ' + chalk.blueBright('--backup') + ' switch.');
+                }
 
-                  if (readlineSync.keyInYN('Do you want to shrink these .har files?')) {
-                     // 'Y' key was pressed.
+                if (readlineSync.keyInYN('Do you want to shrink these .har files?')) {
+                    // 'Y' key was pressed.
                     settings.confirmChanges = true;
 
-                  } else {
-                     console.log('No changes were made.');
-                     process.exit(0);
-                  }
+                } else {
+                    console.log('No changes were made.');
+                    process.exit(0);
+                }
             }
         }
 
@@ -147,9 +147,9 @@ try {
         console.log(columns);
         console.log(endOfLine);
 
-        if (settings.commitChanges === false){
+        if (settings.commitChanges === false) {
             // Analysis complete. Inform the user of how they can apply the changes
-            if (settings.files.length > 1){
+            if (settings.files.length > 1) {
                 console.log('These files can be shrunk by including the ' + chalk.blueBright('--commit') + ' switch');
             } else {
                 console.log('This file can be shrunk by including the ' + chalk.blueBright('--commit') + ' switch');
