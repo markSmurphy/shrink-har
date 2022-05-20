@@ -2,11 +2,14 @@
 
 ![Version](https://img.shields.io/npm/v/shrink-har?style=plastic)
 ![node-current](https://img.shields.io/node/v/shrink-har?style=plastic)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/99616f4abbc54e6fb78e888471814080)](https://www.codacy.com/gh/markSmurphy/shrink-har/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=markSmurphy/shrink-har&amp;utm_campaign=Badge_Grade)
 ![GitHub issues](https://img.shields.io/github/issues/markSmurphy/shrink-har?style=plastic)
-[![Known Vulnerabilities](https://snyk.io/test/npm/shrink-har/badge.svg)](https://snyk.io/test/npm/shrink-har)
+[![Known Vulnerabilities](https://snyk.io/test/github/markSmurphy/shrink-har/badge.svg?targetFile=package.json)](https://snyk.io/test/github/markSmurphy/shrink-har?targetFile=package.json)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/shrink-har?style=plastic)
-![Downloads](https://img.shields.io/npm/dm/shrink-har?style=plastic)
-![Licence](https://img.shields.io/npm/l/shrink-har?style=plastic)
+![Downloads Total](https://badgen.net/npm/dt/shrink-har)
+![Downloads/Month](https://img.shields.io/npm/dm/shrink-har.svg?style=plastic)
+![Last Commit](https://badgen.net/github/last-commit/markSmurphy/shrink-har)
+![Licence](https://img.shields.io/npm/l/shrink-har.svg?style=plastic)
 
 ![shrink-har screenshot](https://via.placeholder.com/830x330?text=shrink-har%20Generic%20Screenshot)
 
