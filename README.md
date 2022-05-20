@@ -1,4 +1,3 @@
-
 # shrink-har
 
 ![Version](https://img.shields.io/npm/v/shrink-har?style=plastic)
@@ -211,6 +210,6 @@ shrink-har --directory /usr/harfiles --commit --yes
 
 ![shrink-har --directory /usr/harfiles --commit --yes](https://via.placeholder.com/830x330?text=shrink-har%20--directory%20/usr/harfiles%20--commit%20--yes)
 
-# Change Log
+## Change Log
 
 The **Change Log** can be found [here](CHANGELOG.md)
