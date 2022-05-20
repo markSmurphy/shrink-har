@@ -1,0 +1,54 @@
+{
+  "name": "shrink-har",
+  "version": "1.0.0",
+  "description": "HTTP Archive files can be large when they contain multiple response bodies. If this content is superfluous to your debugging needs then `shrink-har` allows you create smaller copies of .har files with the response body content stripped out.",
+  "main": "shrink-har.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": false,
+  "preferGlobal": true,
+  "bin": {
+    "shrink-har": "./shrink-har.js"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://MarkSMurphy@bitbucket.org/MarkSMurphy/shrink-har.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarkSMurphy/shrink-har/issues"
+  },
+  "keywords": [
+    ".har",
+    "HAR",
+    "HTTP",
+    "Archive",
+    "shrink",
+    "reduce",
+    "remove",
+    "delete",
+    "content",
+    "response",
+    "body",
+    "dev tools"
+  ],
+  "author": "Mark Murphy",
+  "license": "MIT",
+  "homepage": "https://github.com/MarkSMurphy/shrink-har#readme",
+  "dependencies": {
+    "adm-zip": "^0.5.5",
+    "chalk": "^4.1.2",
+    "columnify": "^1.6.0",
+    "debug": "^4.3.2",
+    "matcher": "^4.0.0",
+    "ora": "^5.4.1",
+    "readline-sync": "^1.4.10",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
+}
