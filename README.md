@@ -11,7 +11,7 @@
 ![Last Commit](https://badgen.net/github/last-commit/markSmurphy/shrink-har)
 ![Licence](https://img.shields.io/npm/l/shrink-har.svg?style=plastic)
 
-![shrink-har screenshot](https://via.placeholder.com/830x330?text=shrink-har%20Generic%20Screenshot)
+![shrink-har screenshot](./screenshots/analysis.gif)
 
 **Shrink-HAR** is a command line utility that reduces the size of saved [HTTP Archive files](https://en.wikipedia.org/wiki/HAR_(file_format)) by removing the response body.
 
@@ -169,33 +169,46 @@ Displays help screen.
 
 ## Examples
 
-Analyse *.har in the current directory
+Analyse `*.har` in the current directory
 
 ```shell
 shrink-har
 ```
 
-![shrink-har](https://via.placeholder.com/830x330?text=shrink-har)
+![shrink-har](./screenshots/analysis.gif)
 
 ---
-Analyse *.har in the current directory displaying verbose output
+
+Analyse `*.har` in the current directory displaying verbose output
 
 ```shell
 shrink-har --verbose
 ```
 
-![shrink-har --verbose](https://via.placeholder.com/830x330?text=shrink-har%20--verbose)
+![shrink-har --verbose](screenshots/shrink-har--verbose.gif)
 
 ---
-Shrink *.har in the current directory, with no prompts, after making a backup
+
+Shrink `*.har` in the current directory, with a confirmation prompt
+
+```shell
+shrink-har --commit
+```
+
+![shrink-har --commit](./screenshots/shrink-har--commit.gif)
+
+---
+
+Shrink `*.har` in the current directory, with no prompts, after making a backup
 
 ```shell
 shrink-har --commit --yes --backup
 ```
 
-![shrink-har --commit --yes --backup](https://via.placeholder.com/830x330?text=shrink-har%20--commit%20--yes%20--backup)
+![shrink-har --commit --yes --backup](./screenshots/shrink-har--commit--yes--backup.gif)
 
 ---
+
 Shrink the file `www.example.com.har` in `~/Downloads` after a confirmation prompt
 
 ```shell
@@ -205,7 +218,8 @@ shrink-har --file www.example.com.har --directory ~/Downloads --commit
 ![shrink-har --file www.example.com.har --directory ~/Downloads --commit](https://via.placeholder.com/830x330?text=shrink-har%20--file%20www.example.com.har%20--directory%20~/Downloads%20--commit)
 
 ---
-Shrink *.har in `/usr/harfiles` without backing up and with no prompt
+
+Shrink `*.har` in `/usr/harfiles` without backing up and with no prompt
 
 ```shell
 shrink-har --directory /usr/harfiles --commit --yes
