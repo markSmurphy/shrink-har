@@ -8,9 +8,8 @@
 
 * Workout the maximum `json` file size which is supported and supply warning for larger files
   * Address limitation through implementation of `streams`
-* Readme documentation needs much work
 * Add Test Suite
-* Add `total space spaced` metric
+* Add `total space saved` metric
 
 ### Future Features
 
