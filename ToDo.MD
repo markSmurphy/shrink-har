@@ -4,11 +4,6 @@
 
 ## Chores
 
-* Import repo into `GitHub`
-* Change `package.json` references to GitHub from ~~BitBucket~~
-* Add `npmjs` and `GitHub` badges into ReadMe
-* Complete initial [Change Log](CHANGELOG.md)
-
 ## Features
 
 * Workout the maximum `json` file size which is supported and supply warning for larger files
@@ -46,3 +41,7 @@
 * ~~List out use cases with CLI argument combinations and expected behaviour for:~~
   * ~~Better examples in `--help` screen~~
 * ~~Improve `Done.` message at the end to make it clearer what's been *done*.~~
+* ~~Import repo into `GitHub`~~
+* ~~Change `package.json` references to GitHub from ~~BitBucket~~~~
+* ~~Add `npmjs` and `GitHub` badges into ReadMe~~
+* ~~Complete initial [Change Log](CHANGELOG.md)~~
