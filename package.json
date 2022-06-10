@@ -39,16 +39,16 @@
   "license": "MIT",
   "homepage": "https://github.com/MarkSMurphy/shrink-har#readme",
   "dependencies": {
-    "adm-zip": "^0.5.5",
+    "adm-zip": "^0.5.9",
     "chalk": "^4.1.2",
     "columnify": "^1.6.0",
-    "debug": "^4.3.2",
+    "debug": "^4.3.4",
     "matcher": "^4.0.0",
     "ora": "^5.4.1",
     "readline-sync": "^1.4.10",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "eslint": "^8.15.0"
+    "eslint": "^8.17.0"
   }
 }
