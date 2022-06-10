@@ -169,7 +169,9 @@ Displays help screen.
 
 ## Examples
 
-Analyse `*.har` in the current directory
+### Analyse current directory
+
+Analyse `*.har` in the current directory:
 
 ```shell
 shrink-har
@@ -178,6 +180,8 @@ shrink-har
 ![shrink-har](./screenshots/analysis.gif)
 
 ---
+
+### Verbose output of current directory's analysis
 
 Analyse `*.har` in the current directory displaying verbose output
 
@@ -189,6 +193,8 @@ shrink-har --verbose
 
 ---
 
+### Shrink all HAR files in current directory (interactive)
+
 Shrink `*.har` in the current directory, with a confirmation prompt
 
 ```shell
@@ -198,6 +204,8 @@ shrink-har --commit
 ![shrink-har --commit](./screenshots/shrink-har--commit.gif)
 
 ---
+
+### Backup and Shrink all HAR files in current directory (silent)
 
 Shrink `*.har` in the current directory, with no prompts, after making a backup
 
@@ -209,23 +217,29 @@ shrink-har --commit --yes --backup
 
 ---
 
-Shrink the file `www.example.com.har` in `~/Downloads` after a confirmation prompt
+### Shrink specific file in specific directory (interactive)
+
+Shrink the file `www.example.com.har` in `./Downloads` after a confirmation prompt
 
 ```shell
-shrink-har --file www.example.com.har --directory ~/Downloads --commit
+shrink-har --file www.example.com.har --directory ./Downloads --commit
 ```
 
-![shrink-har --file www.example.com.har --directory ~/Downloads --commit](https://via.placeholder.com/830x330?text=shrink-har%20--file%20www.example.com.har%20--directory%20~/Downloads%20--commit)
+![shrink-har --file www.example.com.har --directory ./Downloads --commit](./screenshots/shrink-har--file--directory--commit.gif)
 
 ---
 
-Shrink `*.har` in `/usr/harfiles` without backing up and with no prompt
+### Shrink all HAR files in specific directory without backing up (silent)
+
+Shrink `*.har` in `./Downloads/HARFiles/` without backing up and with no prompt
+
+> Warning, this command permanently removes data silently
 
 ```shell
-shrink-har --directory /usr/harfiles --commit --yes
+shrink-har --directory ./Downloads/HARFiles/ --commit --yes
 ```
 
-![shrink-har --directory /usr/harfiles --commit --yes](https://via.placeholder.com/830x330?text=shrink-har%20--directory%20/usr/harfiles%20--commit%20--yes)
+![shrink-har --directory ./Downloads/HARFiles/ --commit --yes](./screenshots/shrink-har--directory--commit--yes.gif)
 
 ## Change Log
 
