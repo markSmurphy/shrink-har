@@ -11,7 +11,7 @@
 ![Last Commit](https://badgen.net/github/last-commit/markSmurphy/shrink-har)
 ![Licence](https://img.shields.io/npm/l/shrink-har.svg?style=plastic)
 
-![shrink-har screenshot](./screenshots/analysis.gif)
+![shrink-har screenshot](https://raw.githubusercontent.com/markSmurphy/shrink-har/master/screenshots/analysis.gif)
 
 **Shrink-HAR** is a command line utility that reduces the size of saved [HTTP Archive files](https://en.wikipedia.org/wiki/HAR_(file_format)) by removing the response body.
 
@@ -177,7 +177,7 @@ Analyse `*.har` in the current directory:
 shrink-har
 ```
 
-![shrink-har](./screenshots/analysis.gif)
+![shrink-har](https://raw.githubusercontent.com/markSmurphy/shrink-har/master/screenshots/analysis.gif)
 
 ---
 
@@ -189,7 +189,7 @@ Analyse `*.har` in the current directory displaying verbose output
 shrink-har --verbose
 ```
 
-![shrink-har --verbose](screenshots/shrink-har--verbose.gif)
+![shrink-har --verbose](https://raw.githubusercontent.com/markSmurphy/shrink-har/master/screenshots/shrink-har--verbose.gif)
 
 ---
 
@@ -201,7 +201,7 @@ Shrink `*.har` in the current directory, with a confirmation prompt
 shrink-har --commit
 ```
 
-![shrink-har --commit](./screenshots/shrink-har--commit.gif)
+![shrink-har --commit](https://raw.githubusercontent.com/markSmurphy/shrink-har/master/screenshots/shrink-har--commit.gif)
 
 ---
 
@@ -213,7 +213,7 @@ Shrink `*.har` in the current directory, with no prompts, after making a backup
 shrink-har --commit --yes --backup
 ```
 
-![shrink-har --commit --yes --backup](./screenshots/shrink-har--commit--yes--backup.gif)
+![shrink-har --commit --yes --backup](https://raw.githubusercontent.com/markSmurphy/shrink-har/master/screenshots/shrink-har--commit--yes--backup.gif)
 
 ---
 
@@ -225,7 +225,7 @@ Shrink the file `www.example.com.har` in `./Downloads` after a confirmation prom
 shrink-har --file www.example.com.har --directory ./Downloads --commit
 ```
 
-![shrink-har --file www.example.com.har --directory ./Downloads --commit](./screenshots/shrink-har--file--directory--commit.gif)
+![shrink-har --file www.example.com.har --directory ./Downloads --commit](https://raw.githubusercontent.com/markSmurphy/shrink-har/master/screenshots/shrink-har--file--directory--commit.gif)
 
 ---
 
@@ -239,7 +239,7 @@ Shrink `*.har` in `./Downloads/HARFiles/` without backing up and with no prompt
 shrink-har --directory ./Downloads/HARFiles/ --commit --yes
 ```
 
-![shrink-har --directory ./Downloads/HARFiles/ --commit --yes](./screenshots/shrink-har--directory--commit--yes.gif)
+![shrink-har --directory ./Downloads/HARFiles/ --commit --yes](https://raw.githubusercontent.com/markSmurphy/shrink-har/master/screenshots/shrink-har--directory--commit--yes.gif)
 
 ## Change Log
 
