@@ -47,7 +47,7 @@
     "matcher": "^4.0.0",
     "ora": "^5.4.1",
     "readline-sync": "^1.4.10",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.0"
   },
   "devDependencies": {
     "eslint": "^8.17.0"
