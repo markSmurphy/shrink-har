@@ -67,10 +67,10 @@ try {
 
                 // Confirm, or warn, about backing up files
                 if (settings.backup) {
-                    console.log(chalk.blueBright('Info: ') + 'If you confirm these changes your files ' + chalk.bold('will') + ' be backed up');
+                    console.log(`${chalk.blueBright('Info: ')}If you confirm these changes your files ${chalk.bold('will')} be backed up`);
                 } else {
-                    console.log(chalk.yellow('Warning: ') + 'If you confirm these changes your files ' + chalk.bold('will not') + ' be backed up!');
-                    console.log('You can change this by including the ' + chalk.blueBright('--backup') + ' switch.');
+                    console.log(`${chalk.yellow('Warning: ')}If you confirm these changes your files ${chalk.bold('will not')} be backed up!`);
+                    console.log(`You can change this by including the ${chalk.blueBright('--backup')} switch.`);
                 }
 
                 if (readlineSync.keyInYN('Do you want to shrink these .har files?')) {
@@ -88,7 +88,7 @@ try {
         let results = [];
 
         // Display the directory we're working in
-        console.log(chalk.blueBright('Info: ') + 'Working directory is ' + chalk.yellowBright(settings.directory));
+        console.log(`${chalk.blueBright('Info: ')}Working directory is ${chalk.yellowBright(settings.directory)}`);
 
         // Create and start the activity spinner
         const spinnerProcessing = ora({
@@ -109,7 +109,7 @@ try {
 
                 process.exit(5) // Exit to terminal
             } else {
-                console.log(chalk.blueBright('Info: ') + 'Files have been backed up to ' + chalk.yellowBright(response.zipFilename));
+                console.log(`${chalk.blueBright('Info: ')}Files have been backed up to ${chalk.yellowBright(response.zipFilename)}`);
             }
         }
 
@@ -150,9 +150,9 @@ try {
         if (settings.commitChanges === false) {
             // Analysis complete. Inform the user of how they can apply the changes
             if (settings.files.length > 1) {
-                console.log('These files can be shrunk by including the ' + chalk.blueBright('--commit') + ' switch');
+                console.log(`These files can be shrunk by including the ${chalk.blueBright('--commit')} switch`);
             } else {
-                console.log('This file can be shrunk by including the ' + chalk.blueBright('--commit') + ' switch');
+                console.log(`This file can be shrunk by including the ${chalk.blueBright('--commit')} switch`);
             }
         }
     }
