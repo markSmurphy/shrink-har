@@ -1,6 +1,6 @@
 {
   "name": "shrink-har",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "HTTP Archive files can be large when they contain multiple response bodies. If this content is superfluous to your debugging needs then `shrink-har` allows you create smaller copies of .har files with the response body content stripped out.",
   "main": "shrink-har.js",
   "scripts": {
@@ -47,9 +47,10 @@
     "matcher": "^4.0.0",
     "ora": "^5.4.1",
     "readline-sync": "^1.4.10",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.2"
   },
   "devDependencies": {
-    "eslint": "^8.17.0"
+    "eslint": "^8.29.0",
+    "rome": "^11.0.0"
   }
 }

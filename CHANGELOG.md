@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.2 - TBC
+
+* Dependency Updates.
+
 ## v1.0.1 - 11<sup>th</sup> June 2022
 
 * Fixed broken references to screenshots in `README` (caused by an `.npmignore` entry).
