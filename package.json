@@ -1,6 +1,6 @@
 {
   "name": "shrink-har",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "HTTP Archive files can be large when they contain multiple response bodies. If this content is superfluous to your debugging needs then `shrink-har` allows you create smaller copies of .har files with the response body content stripped out.",
   "main": "shrink-har.js",
   "scripts": {
@@ -40,7 +40,7 @@
   "license": "MIT",
   "homepage": "https://github.com/MarkSMurphy/shrink-har#readme",
   "dependencies": {
-    "adm-zip": "^0.5.9",
+    "adm-zip": "^0.5.10",
     "chalk": "^4.1.2",
     "columnify": "^1.6.0",
     "debug": "^4.3.4",
@@ -50,7 +50,7 @@
     "yargs": "^17.6.2"
   },
   "devDependencies": {
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "rome": "^11.0.0"
   }
 }

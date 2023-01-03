@@ -1,8 +1,17 @@
 # Changelog
 
-## v1.0.2 - TBC
+## v1.0.3 - 3<sup>rd</sup> January 2023
+
+* Updated [adm-zip](https://www.npmjs.com/package/adm-zip) to [v0.5.10](https://github.com/cthackers/adm-zip/releases/tag/v0.5.10).
+* Updated dev dependencies
+
+---
+
+## v1.0.2 - unreleased
 
 * Dependency Updates.
+
+---
 
 ## v1.0.1 - 11<sup>th</sup> June 2022
 
