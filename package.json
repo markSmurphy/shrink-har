@@ -9,7 +9,7 @@
   "private": false,
   "preferGlobal": true,
   "bin": {
-    "shrink-har": "./shrink-har.js"
+    "shrink-har": "shrink-har.js"
   },
   "engines": {
     "node": ">=12"
