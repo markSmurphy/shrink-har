@@ -243,4 +243,4 @@ shrink-har --directory ./Downloads/HARFiles/ --commit --yes
 
 ## Change Log
 
-The **Change Log** can be found [here](CHANGELOG.md)
+The **Change Log** can be found [in CHANGELOG.md here](CHANGELOG.md)
