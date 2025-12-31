@@ -1,22 +1,28 @@
 # Changelog
 
+## v1.1.0 - 31<sup>st</sup> December 2025
+
+- Dependency Updates.
+- Readme Update.
+- Code refactoring to modernise codebase.
+
 ## v1.0.3 - 3<sup>rd</sup> January 2023
 
-* Updated [adm-zip](https://www.npmjs.com/package/adm-zip) to [v0.5.10](https://github.com/cthackers/adm-zip/releases/tag/v0.5.10).
-* Updated dev dependencies
+- Updated [adm-zip](https://www.npmjs.com/package/adm-zip) to [v0.5.10](https://github.com/cthackers/adm-zip/releases/tag/v0.5.10).
+- Updated dev dependencies
 
 ---
 
 ## v1.0.2 - unreleased
 
-* Dependency Updates.
+- Dependency Updates.
 
 ---
 
 ## v1.0.1 - 11<sup>th</sup> June 2022
 
-* Fixed broken references to screenshots in `README` (caused by an `.npmignore` entry).
-* Fixed `package.json` so it references the correct repo
+- Fixed broken references to screenshots in `README` (caused by an `.npmignore` entry).
+- Fixed `package.json` so it references the correct repo.
 
 ---
 
