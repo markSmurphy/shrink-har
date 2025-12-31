@@ -33,8 +33,16 @@ const harParser = require('./lib/har-parser');
 // Initialise configuration
 const config = require('./lib/configuration');
 
+// Exit codes
+const EXIT_CODES = {
+    SUCCESS: 0,
+    GENERAL_ERROR: 1,
+    BACKUP_FAILED: 5,
+    INVALID_ARGUMENT: 9
+};
+
 // Populate the settings object
-var settings = config.getSettings();
+const settings = config.getSettings();
 
 try {
     // Check for '--help' command line parameters
@@ -44,7 +52,7 @@ try {
         let help = require('./lib/help');
         help.helpScreen(argv.verbose);
 
-        process.exit(0) // Exit to terminal
+        process.exit(EXIT_CODES.SUCCESS);
 
     } else {
 
@@ -52,17 +60,17 @@ try {
 
         // Check that we have at least one file to operate on
         if (settings.files.length === 0) {
-            console.log('%s: There are no files in [%s] matching [%s]', chalk.red('Error'), chalk.bold(settings.directory), chalk.bold(settings.fileSpec));
+            console.log(`${chalk.red('Error')}: There are no files in [${chalk.bold(settings.directory)}] matching [${chalk.bold(settings.fileSpec)}]`);
 
             // Return to terminal with exit code 9 (https://nodejs.org/api/process.html#process_exit_codes)
             // 9 Invalid Argument: Either an unknown option was specified, or an option requiring a value was provided without a value.
-            process.exit(9) // Exit to terminal
+            process.exit(EXIT_CODES.INVALID_ARGUMENT);
         }
 
         // Check if we've been asked to commit changes
         if (settings.commitChanges) {
             // Obtain confirmation for writing changes
-            if (settings.confirmChanges === false) { // There was no `--yes` switch, so interactive confirmation is required
+            if (!settings.confirmChanges) { // There was no `--yes` switch, so interactive confirmation is required
                 let readlineSync = require('readline-sync'); // Import library to read input lines from terminal
 
                 // Confirm, or warn, about backing up files
@@ -79,7 +87,7 @@ try {
 
                 } else {
                     console.log('No changes were made.');
-                    process.exit(0);
+                    process.exit(EXIT_CODES.SUCCESS);
                 }
             }
         }
@@ -97,17 +105,16 @@ try {
         }).start();
 
         // Backup files before making changes (if configured to do so)
-        if ((settings.backup === true) && (settings.commitChanges === true)) {
-            spinnerProcessing.text = "Backing up files ...";
+        if (settings.backup && settings.commitChanges) {
+            spinnerProcessing.text = `Backing up files ...`;
             spinnerProcessing.render();
             let backup = require('./lib/backup');
             let response = backup.backupFiles(settings.files, settings.directory);
             debug('backup.backupFiles() returned: %O', response);
-            if (response.success === false) {
-                // Backup failed so we won't make any changes
-                console.log('%s: Backup of existing files failed [%s]', chalk.red('Error'), response.message);
+            if (!response.success) {
+                console.log(`${chalk.red('Error')}: Backup of existing files failed [${response.message}]`);
 
-                process.exit(5) // Exit to terminal
+                process.exit(EXIT_CODES.BACKUP_FAILED);
             } else {
                 console.log(`${chalk.blueBright('Info: ')}Files have been backed up to ${chalk.yellowBright(response.zipFilename)}`);
             }
@@ -147,7 +154,7 @@ try {
         console.log(columns);
         console.log(endOfLine);
 
-        if (settings.commitChanges === false) {
+        if (!settings.commitChanges) {
             // Analysis complete. Inform the user of how they can apply the changes
             if (settings.files.length > 1) {
                 console.log(`These files can be shrunk by including the ${chalk.blueBright('--commit')} switch`);
@@ -160,4 +167,5 @@ try {
 } catch (error) {
     console.error(chalk.redBright(error.message));
     console.error('An error occurred: %O', error);
+    process.exit(EXIT_CODES.GENERAL_ERROR);
 }
